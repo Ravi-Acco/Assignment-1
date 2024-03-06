@@ -21,7 +21,7 @@
             justify-content: center;
             /* height: 70%;
             width: 80%; */
-            background-color: brown;
+            /* background-color: brown; */
         }
         .template{
             /* background-color: blueviolet; */
@@ -36,26 +36,62 @@
             display: flex;
             height: 100%;
             width: 50%;
-            background-color: aliceblue;
+            background-color: gray;
             /* object-fit: contain; */
         }
         .details-holder{
             height: 100%;
             width: 50%;
-            background-color: aqua;
+            /* background-color: aqua; */
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: lightgray;
         }
         .image{
-            object-fit: cover;
+            object-fit: contain;
+            width: 100%;
         }
         .input-block{
-            height: 80%;
-            width: 70%;
+            height: 85%;
+            width: 85%;
             border: 2px solid black;
             border-radius: 20px;
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
         }
+        .user-name,.pass{
+            position: absolute;
+            top:30%;
+            left:30%;
+            right:5%;
+        }
+        .pass{
+            top:50%;
+        }
+        .button{
+            position: absolute;
+            top:70%;
+            left:30%;
+            right: 30%;
+            cursor: pointer;
+        }
+        .user-label{
+            padding-top: 33%;
+            padding-left: 5px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .label{
+            padding-bottom: 47%;
+            padding-left: 5px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
     </style>
 </head>
 <body>
@@ -67,11 +103,15 @@
     <div class="out-div">
         <div class="template">
             <div class="img-holder">
-                <img class="image" src="github-cover.jpg" alt="git">
+                <img class="image" src="github-mark.png" alt="git">
             </div>
             <div class="details-holder">
                 <div class="input-block">
-
+                    <label for="user-name" class="user-label">Username</label>
+                    <input class="user-name" type="text">
+                    <label for="pass" class="label">Password</label>
+                    <input type="password" name="" class="pass" placeholder="Enter password">
+                    <input type="button" value="Login" class="button">
                 </div>
             </div>
         </div>
